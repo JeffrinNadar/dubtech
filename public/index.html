@@ -1,0 +1,144 @@
+<!--
+Jeffrin Nadar and Mo
+CSE 154
+5/3/2024
+This is the main page of the TechDubs website showing relevant products, deals, new
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <section class="navbar">
+      <h3 id="logo">TechDubs</h3>
+      <ul>
+        <li>
+          <form id="search">
+            <input id="searches" type="text" placeholder="search tech" name="search">
+          </form>
+        </li>
+        <li><p id="home">Home</p></li>
+        <li><p id="productsLink">Products</p></li>
+        <li><p id="cart">Cart</p></li>
+        <li><p id="profile" class="hidden">Your Profile</p></li>
+        <li><button id="login-button">Log in</button></li>
+        <li><button id="logout-button" class="hidden">Log out</button></li>
+      </ul>
+    </section>
+  </header>
+
+  <main>
+    <!-- log in -->
+    <section id="login-page" class="login hidden">
+      <h2 class="titles">Sign in to Your Account</h2>
+      <section class="login-area">
+        <form class="login-form">
+          <h1>👨‍💻</h1>
+          <label for="nameinput">User</label>
+          <input type="text" id="nameinput" name="username" required>
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="password" required>
+          <button class="signin">Sign In</button>
+        </form>
+      </section>
+    </section>
+    <!-- log in -->
+
+    <section class="profileP hidden">
+      <h2 class="titles">Welcome User!</h2>
+      <section class="login-area">
+        <h3 id="user">Your Account Profile </h3>
+        <h3 id="transaction-history">Transactions History</h3>
+        <button id="transaction-btn">Get transactions</button>
+        <section id="display-transaction"></section>
+      </section>
+    </section>
+
+    <!-- cart -->
+    <section class="cartSection hidden">
+      <section class="recommended">
+        <h2 class="titles">Your Cart</h2>
+          <section class="button-container">
+            <button id="confirm-button" class="cart-button">Confirm</button>
+            <button id="cancel-button" class="cart-button">Cancel</button>
+          </section>
+      </section>
+    </section>
+
+      <!-- cart -->
+
+      <!-- Error Section -->
+    <section id="errorArea" class="hidden"></section>
+    <!-- Home Page -->
+    <section class="homeSection">
+      <section class="frontpage">
+        <section class="left">
+          <h1 id="frontlogo">Find The Best Tech</h1>
+          <h4>Shop for the newest tech on TechDubs!</h4>
+          <button class="btnfront">Shop</button>
+        </section>
+      </section>
+      <section class="shop-now">
+        <h2 class="titles"> 💻 Shop Now! 💻</h2>
+        <section class="gridphoto">
+          <!-- <div id="one"><a href="index.html">Recommended</a></div> -->
+          <div id="two"><a href="index.html">New Products</a></div>
+          <!-- <div id="three"><a href="index.html">Current Deals</a></div> -->
+        </section>
+      </section>
+    </section>
+<!-- Shopping area -->
+    <section class="shopSection hidden">
+      <section class="banner">
+      <section class="button-wrap">
+        <button id="view-button">Change view</button>
+        <button id="backButton" class="hidden">Back</button>
+      </section>
+      </section>
+        <h2 id="shopTitles">Shop Products</h2>
+        <select id="category-filter">
+          <option value="All">All</option>
+          <option value="Phone">Phone</option>
+          <option value="Headphones">Headphones</option>
+          <option value="Console">Console</option>
+        </select>
+        <section class="shopRecommended">
+          <section class="productgrid" id="list-products"></section>
+        </section>
+    </section>
+    <!-- Search Results -->
+    <section id="search-results" class="hidden"></section>
+    <!-- Buy Products -->
+    <section class="back hidden"></section>
+    <section class="buy-area hidden">
+      <section class="buy-product hidden"></section>
+      <!-- Submit a review for a product -->
+      <section class="review-form hidden">
+        <h3 class="titles">Leave A Review!</h3>
+        <form id="review">
+          <label for="quantity">Stars (1-5)</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="5">
+          <textarea name="comment" form="review"></textarea>
+          <input type="submit" id="submit" value="Submit">
+        </form>
+      </section>
+      <!-- Reviews of the product -->
+      <h3 class="titles hidden">Check out Reviews on this Product</h3>
+      <section class="submitted-reviews">
+      </section>
+    </section>
+
+    <!-- Filtered Products -->
+    <div id="filtered-products"></div>
+
+    <!-- End of Shopping area -->
+  </main>
+</body>
+</html>
