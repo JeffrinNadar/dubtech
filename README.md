@@ -34,7 +34,7 @@ You'll need the following software installed:
     
     There is a file called **`tables.sql`** where you can run SQL commands to create the tables locally.
 
-    You can use an SQLite tool to create the `dubtech.db` file and define your tables with initial data.
+    You can use an SQLite tool to create the `dubtech.db` file and define your tables with initial data. If you prefer, you can use the current database and ignore this step.
 
 ### Running the Server
 
